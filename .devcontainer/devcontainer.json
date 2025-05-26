@@ -1,0 +1,16 @@
+{
+  "name": "Python EXE Builder",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-windowsservercore",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install pyinstaller auto-py-to-exe",
+  "forwardPorts": [5000],
+  "remoteUser": "ContainerAdministrator"
+}

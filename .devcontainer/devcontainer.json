@@ -1,7 +1,6 @@
 {
   "name": "Python EXE Builder",
-  "image": "mcr.microsoft.com/devcontainers/python:3.11-windowsservercore",
-  "features": {},
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-bullseye",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -10,7 +9,6 @@
       ]
     }
   },
-  "postCreateCommand": "pip install pyinstaller auto-py-to-exe",
-  "forwardPorts": [5000],
-  "remoteUser": "ContainerAdministrator"
+  "postCreateCommand": "python -m pip install --upgrade pip && pip install pyinstaller auto-py-to-exe requests",
+  "remoteUser": "vscode"
 }
